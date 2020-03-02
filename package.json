@@ -1,0 +1,15 @@
+{
+  "name": "salesforce-training-project",
+  "version": "1.0.0",
+  "description": "Salesforce Training Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.lioncloud.net:nicholas.fantozz/salesforce-training-project.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
