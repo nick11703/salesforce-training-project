@@ -1,20 +1,18 @@
 var account = module.superModule;
 var server = require('server');
-
 server.extend(account);
-
 server.append('SubmitRegistration', function (req, res, next) {
   var CustomerMgr = require('dw/customer/CustomerMgr');
   var Transaction = require('dw/system/Transaction');
   var Resource = require('dw/web/Resource');
-  var formErrors = require('*/cartridge/scripts/formErrors');
   var registrationForm = server.forms.getForm('profile');
 
   // We are appending this functionality to thje default
   // If the form is valid we have a new user.
   var data = res.getViewData() || {};
+  var dob;
   if (registrationForm.valid) {
-    var dob = registrationForm.customer.dob.value;
+    dob = registrationForm.customer.dob.value;
     data.dob = dob;
 
     // SFRA will handle creating the user, we need to hook in

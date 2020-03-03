@@ -2,13 +2,6 @@
 
 var base = module.superModule;
 
-module.exports = function account(currentCustomer, addressModel, orderModel) {
-	base.call(this, currentCustomer, addressModel, orderModel);
-   this.profile=getUpdatedProfile(currentCustomer);
-    
-}
-
-
 function getUpdatedProfile(currentCustomer) {
     var result;
     if (currentCustomer.profile) {
@@ -24,4 +17,9 @@ function getUpdatedProfile(currentCustomer) {
         result = null;
     }
     return result;
+}
+
+module.exports = function account(currentCustomer, addressModel, orderModel) {
+    base.call(this, currentCustomer, addressModel, orderModel);
+    this.profile = getUpdatedProfile(currentCustomer);
 }

@@ -24,7 +24,7 @@
                 <dd>${pdict.account.profile.phone}</dd>
             </dl>
              <dl>
-                <dt>Date of birth</dt>
+                <dt>${Resource.msg('label.profile.dob','forms',null)}</dt>
                 <dd><isprint value="${pdict.account.profile.DOB}" formatter="MM/dd/yyyy" /></dd>
             </dl>
         </isif>

@@ -8,7 +8,7 @@ var dobValidate = require('../scripts/dob-validation');
 server.get('Show',  function (req, res, next) {
 	var customerLoggedIn = checkIfLoggedInCustomer(req);
 	var customerIsAdult = false;
-	
+
 	if(customerLoggedIn) {
 		var accountModel = getModel(req);
 		var customerDOB = accountModel.profile.DOB;
@@ -24,9 +24,6 @@ server.get('Show',  function (req, res, next) {
 	}
 });
 
-
-
-
 function checkIfLoggedInCustomer(req) {
 	return req.currentCustomer.profile;
 }
@@ -41,7 +38,6 @@ function getModel(req) {
 
     var orderModel;
     var preferredAddressModel;
-    var profile = req.currentCustomer;
 
     if (!req.currentCustomer.profile) {
         return null;
