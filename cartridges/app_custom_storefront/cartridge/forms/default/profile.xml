@@ -61,7 +61,9 @@
 			regexp="^\d{2}\/\d{2}\/\d{4}$"
 			missing-error="error.message.required.dob"
 			parse-error="error.message.parse.dob.profile.form"
+			range-error="error.message.range.dob.profile.form"
 			max-length="10"
+			validation="${require('~/cartridge/scripts/dob-validation').checkIfCustomerIsAdultByFormField(formfield);}"
 			type="date"/> 
 
 		<field 

@@ -1,0 +1,8 @@
+<!--- TEMPLATENAME: DenialPage.isml --->
+
+
+<isdecorate template="common/layout/page">
+
+Go back to SFCC training. You are not allowed here until you are <b>18</b>
+
+</isdecorate>

@@ -1,0 +1,9 @@
+<!--- TEMPLATENAME: SpecialCategory.isml --->
+
+
+<isdecorate template="common/layout/page">
+
+Hi, This is special category<br>
+If you see this, It means you have succesfully completed your SFCC training.
+
+</isdecorate>
