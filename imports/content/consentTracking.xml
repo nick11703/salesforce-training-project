@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+    <content content-id="tracking_hint">
+        <display-name xml:lang="x-default">tracking hint</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="tracking-consent"&gt;&#13;
+    &lt;p&gt;Some of the content in this website is meant for customers who are &lt;b&gt;18 and above &lt;/b&gt;. Some of the categories you visit might take you to a denial page. By clicking yes you will be entering the website at your own risk&lt;/p&gt;&#13;
+&lt;/div&gt;</custom-attribute>
+        </custom-attributes>
+    </content>
+</library>
