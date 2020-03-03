@@ -20,3 +20,12 @@ A client wants to build a website for adult users only. The website has certain 
 * Redirect or error for invalid page view of Women -> Sample Page
 * One DOB validation method
  
+### Setup
+1. Clone the repo outside of the base SFRA cartridge
+2. Run `npm install`
+3. Resolve any issues. Possibly run `npm install node-sass`
+4. Run `npm run build`
+5. Import content and objects
+  * Import content from `imports/content` into `Merchant Tools >  Content >  Import & Export`
+  * Import objects from `imports/objects` into `Administration >  Site Development >  Import & Export`
+6. Upload the cartridge with `npm run uploadCartridge`
