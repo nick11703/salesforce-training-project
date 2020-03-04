@@ -17,7 +17,7 @@ server.append('SubmitRegistration', function (req, res, next) {
 
     // SFRA will handle creating the user, we need to hook in
     // after that and get the user and add the DOB to the profile
-    this.on('route:Complete', function (req, res) {
+    this.on('route:BeforeComplete', function (req, res) {
       var viewData = res.getViewData();
       var login = viewData.email;
       try {
