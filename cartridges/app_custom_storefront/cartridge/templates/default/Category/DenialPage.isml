@@ -1,8 +1,14 @@
 <!--- TEMPLATENAME: DenialPage.isml --->
-
-
 <isdecorate template="common/layout/page">
-
-Go back to SFCC training. You are not allowed here until you are <b>18</b>
-
+  <div class="container text-center">
+    <br>
+    <br>
+    <br>
+    <br>
+    Go back to SFCC training. You are not allowed here until you are <strong>${pdict.restrictedAge}</strong>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </isdecorate>

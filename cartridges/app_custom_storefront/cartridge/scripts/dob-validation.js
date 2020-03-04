@@ -1,8 +1,9 @@
 var checkIfCustomerIsAdult = function (customerDOB) {
+    var sitePrefs = dw.system.Site.getCurrent().getPreferences();
+    var minimumAge = sitePrefs.getCustom()["restrictedAge"];
     var month=(customerDOB.getMonth() +1);
     var day=customerDOB.getDate();
     var year=customerDOB.getFullYear();
-    var minimumAge = 18;
     var mydate = new Date();
     mydate.setFullYear(year, month-1, day);
 

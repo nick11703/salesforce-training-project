@@ -6,22 +6,25 @@ var dobValidate = require('../scripts/dob-validation');
  * Any customization on this endpoint, also requires update for Default-Start endpoint
  */
 server.get('Show',  function (req, res, next) {
-	var customerLoggedIn = checkIfLoggedInCustomer(req);
-	var customerIsAdult = false;
+  var sitePrefs = dw.system.Site.getCurrent().getPreferences();
+  var restrictedAge = sitePrefs.getCustom()["restrictedAge"];
+  var customerLoggedIn = checkIfLoggedInCustomer(req);
+  var customerIsAdult = false;
 
-	if(customerLoggedIn) {
-		var accountModel = getModel(req);
-		var customerDOB = accountModel.profile.DOB;
-		var customerDOB = new Date (accountModel.profile.DOB);
-		customerIsAdult = dobValidate.checkIfCustomerIsAdult(customerDOB);
-	}
-	if (customerLoggedIn && customerIsAdult) {
+  if(customerLoggedIn) {
+    var accountModel = getModel(req);
+    var customerDOB = accountModel.profile.DOB;
+    var customerDOB = new Date (accountModel.profile.DOB);
+    customerIsAdult = dobValidate.checkIfCustomerIsAdult(customerDOB);
+  }
+  if (customerLoggedIn && customerIsAdult) {
     res.render('Category/SpecialCategory');
-    next();
-	} else {
-	    res.render('Category/DenialPage');
-	    next();	
-	}
+  } else {
+    res.render('Category/DenialPage', {
+      restrictedAge: restrictedAge
+     });
+  }
+  next();
 });
 
 function checkIfLoggedInCustomer(req) {
