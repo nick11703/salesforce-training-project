@@ -8,6 +8,7 @@ A client wants to build a website for adult users only. The website has certain 
 * Save the Date of Birth in Profile custom attribute.
 * Display as non-editable field on My Account.
 * Show an error or redirect the user to another page if unregistered customer or a customer less than 18 year is trying to visit Women->Sample Page.
+* Add a custom site preference for the restricted age value and use that for age validation
 
 ### Tasks
 * Registration Form F/E template
@@ -19,6 +20,7 @@ A client wants to build a website for adult users only. The website has certain 
 * Controller for Women -> Sample Page
 * Redirect or error for invalid page view of Women -> Sample Page
 * One DOB validation method
+* Site preference custom attribute for age restriction value
  
 ### Setup
 1. Clone the repo outside of the base SFRA cartridge
