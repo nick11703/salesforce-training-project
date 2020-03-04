@@ -12,6 +12,18 @@
         <group-definitions>
             <attribute-group group-id="Standard">
                 <display-name xml:lang="x-default">Profile Attributes</display-name>
+                <attribute attribute-id="salutation" system="true"/>
+                <attribute attribute-id="title" system="true"/>
+                <attribute attribute-id="companyName" system="true"/>
+                <attribute attribute-id="jobTitle" system="true"/>
+                <attribute attribute-id="firstName" system="true"/>
+                <attribute attribute-id="lastName" system="true"/>
+                <attribute attribute-id="suffix" system="true"/>
+                <attribute attribute-id="gender" system="true"/>
+                <attribute attribute-id="birthday" system="true"/>
+                <attribute attribute-id="email" system="true"/>
+                <attribute attribute-id="nextBirthday" system="true"/>
+                <attribute attribute-id="secondName" system="true"/>
                 <attribute attribute-id="DOB"/>
             </attribute-group>
         </group-definitions>
